@@ -10,47 +10,47 @@
     line-height: 1.7;
     position: relative;
   }
-  
+
   html {
     font-size: 16px;
   }
-  
+
   @media (min-width: 768px) {
     html {
       font-size: 18px;
     }
   }
-  
+
   @media (min-width: 1024px) {
     html {
       font-size: 20px;
     }
   }
-  
-  /* Font size constraints */
-  * {
-    font-size: clamp(0.75rem, 1vw + 0.5rem, 1.25rem); /* 12px - 20px */
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem); /* 16px - 20px */
-  }
-  
-  p, span, a, button, input, select, textarea, label {
-    font-size: clamp(0.75rem, 1vw + 0.5rem, 1.25rem); /* 12px - 20px */
-  }
 
-  body::before {
-    content: '';
-    @apply fixed inset-0 pointer-events-none z-10;
-    background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-      radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-      radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
-    background-size: 300px 300px, 400px 400px, 350px 350px, 450px 450px;
-  }
+  /* Font size constraints */
+  /* * {
+    font-size: clamp(0.75rem, 1vw + 0.5rem, 1.25rem); /* 12px - 20px */
+  /* } */
+
+  /* h1, h2, h3, h4, h5, h6 {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem); /* 16px - 20px */
 }
+
+/* p, span, a, button, input, select, textarea, label {
+    font-size: clamp(0.75rem, 1vw + 0.5rem, 1.25rem); /* 12px - 20px */
+/* }  */
+
+body::before {
+  content: '';
+  @apply fixed inset-0 pointer-events-none z-10;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 300px 300px, 400px 400px, 350px 350px, 450px 450px;
+}
+
 
 @layer utilities {
   .text-gradient {
@@ -91,9 +91,12 @@
 }
 
 @keyframes shimmer {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(0deg) translateX(-50%);
   }
+
   50% {
     transform: rotate(180deg) translateX(50%);
   }
