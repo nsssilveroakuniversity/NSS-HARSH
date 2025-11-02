@@ -281,7 +281,7 @@ export const Login = () => {
               htmlFor="identifier"
               className="block text-sm font-medium text-white/90 mb-1"
             >
-              Email ID
+              Email ID or Mobile Number
             </label>
             <input
               type="text"
